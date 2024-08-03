@@ -1,0 +1,97 @@
+1.
+# 我的思路
+items6 = list(range(random.randrange(1, 100), random.randrange(1, 100)))
+print(type(items6))
+print(29 not in items6)
+
+但是其中有一些问题
+生成的两个随机数可能相等或第一个大于第二个，这会导致 range 对象为空或不产生预期的序列。
+
+# ai改正
+import random
+
+# 生成一个随机的起始和结束值
+start = random.randrange(1, 100)
+end = random.randrange(1, 100)
+
+# 创建一个列表
+items6 = list(range(start, end))
+
+print(type(items6))  # 通常输出: <class 'list'>
+print(29 not in items6)  # 检查29是否不在列表中
+
+# 打印列表内容，以便检查
+print(items6)
+
+
+
+
+2.
+counter = [0] * 6
+for _ in range(1, 6001):
+    dish = random.randrange(1, 7)
+    counter[dish - 1] += 1
+i = 0
+while i < 6:
+    print("第%d点的骰子次数为%d" % (i + 1, counter[i]))
+    i += 1
+# 或者是这样
+for dish in range(1, 7):
+    print(f'{dish}点的骰子有{counter[dish - 1]}次')
+我的想法
+我感觉第二种的代码偏向于数学逻辑性，将整个代码的简洁性发挥的好，没有多余变量将他们之间的关系利用的不错
+
+ai提取出来的优点
+简洁性：代码更简洁，易于理解和维护。
+直观性：直接使用点数作为循环变量，使得代码的逻辑更直观。
+减少变量：不需要额外的索引变量，减少了代码的复杂性。
+
+pyhton之禅
+14. Namespaces are one honking great idea -- let's do more of those!（命名空间非常有用，我们应当多加利用）
+
+
+
+这样理解生成式语法，先要把对象提取出来，如果代码中有对他的运算操作先进行操作，然后才是for和if代码语句的使用
+
+3.
+原始的想法代码
+s = ['hello world', 'hallo worf']
+s1 = s.strip()
+print(s1.find('o'))
+print(s1.startswith('he'))
+print(s1.endswith('ld'))
+print(s1.isalpha())
+print(s1.rjust(20))
+
+迭代后的：
+s = ['hello world', 'hallo worf']
+
+# 去除列表中每个字符串两端的空白字符
+stripped_strings = [item.strip() for item in s]
+
+# 遍历去除空白后的字符串列表
+for str_item in stripped_strings:
+    print(str_item.find('o'))  # 查找字符 'o' 的索引
+    print(str_item.startswith('he'))  # 检查是否以 'he' 开头
+    print(str_item.endswith('ld'))  # 检查是否以 'ld' 结尾
+    print(str_item.isalpha())  # 检查字符串是否只包含字母
+    print(str_item.rjust(20))  # 将字符串右对齐填充到指定宽度
+# 寻找所有包含 'o' 的字符串
+strings_with_o = [item for item in s if 'o' in item]
+
+# 寻找所有以 'he' 开头的字符串
+strings_starting_with_he = [item for item in s if item.startswith('he')]
+
+# 寻找所有以 'ld' 结尾的字符串
+strings_ending_with_ld = [item for item in s if item.endswith('ld')]
+
+# 寻找所有只包含字母的字符串
+strings_with_only_letters = [item for item in s if item.isalpha()]
+
+print(strings_with_o)  # 输出包含 'o' 的字符串列表
+print(strings_starting_with_he)  # 输出以 'he' 开头的字符串列表
+print(strings_ending_with_ld)  # 输出以 'ld' 结尾的字符串列表
+print(strings_with_only_letters)  # 输出只包含字母的字符串列表
+
+
+

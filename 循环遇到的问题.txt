@@ -1,0 +1,61 @@
+# 反转字符串
+
+# 我思考的但有问题
+str1 = "社会我孙工，人狠话不多"
+i = 0
+for num in str1:
+    i += 1
+    if num == " ":
+        i -= 1
+    print(i)
+while i > 0:
+    print(str1[i])
+    i -= 1
+
+# ai写的
+# 反转字符串
+str1 = "社会我孙工，人狠话 不多"
+# 初始化索引为字符串长度
+i = len(str1) - 1
+
+# 打印反转后的字符串
+for num in str1:
+    if num != ' ' and i >= 0:
+        print(str1[i])  # 使用 end='' 防止打印换行符
+    else:
+        num = ""
+        print(str1[i])
+    i -= 1  # 递减索引以反转字符串
+
+
+
+
+# 反转字符串并去掉空格
+str1 = "社会我孙工，人狠话  不多"
+
+# 初始化索引为字符串长度
+i = len(str1) - 1
+reversed_str1 = ''
+
+# 打印反转后的字符串
+while i >= 0:
+    if str1[i] != ' ':
+        reversed_str1 += str1[i]
+    i -= 1
+
+print(reversed_str1)
+"""
+
+# 视频给的
+notice = "社会我孙工，人狠话不多"
+
+result = ""
+for c in notice:
+    result = c + result# c + result 和 result + c 是不一样的
+
+print(result)
+
+
+
+# 有意思的
+range(100, 0, -2)：可以用来产生100到1的偶数，其中-2是步长（跨度），即每次递减的值，0取不到。

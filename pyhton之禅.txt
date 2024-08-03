@@ -1,0 +1,15 @@
+Zen of Python by Tim Peters
+01. Beautiful is better than ugly. （优美 胜过 丑陋）
+02. Explicit is better than implicit.（明确 胜过 隐晦）
+03. Simple is better than complex.（简单 胜过 复杂）
+04. Complex is better than complicated.（复杂 胜过 繁复）
+05. Flat is better than nested.（扁平 胜过 嵌套）
+06. Sparse is better than dense.（稀疏 胜过 密集）
+07. Readability counts.（可读性很重要）
+08. Special cases aren't special enough to break the rules.（特殊情况也不应该违反上述规则）    Although practicality beats purity.（但实用胜过纯粹）
+09. Errors should never pass silently.（异常不应该被静默处理）    Unless explicitly silenced.（除非你希望如此）
+10. In the face of ambiguity, refuse the temptation to guess.（遇到模棱两可的地方，不要胡乱猜测）
+11. There should be one-- and preferably only one --obvious way to do it.（应该提供一种，最好只提供一种，一目了然的途径）    Although that way may not be obvious at first unless you're Dutch.（当然这不是一戳而就的，除非你是那个荷兰人[这里指的是Python之父Guido]）
+12. Now is better than never.（现在开始做 胜过 不做）    Although never is often better than *right* now.（不做 胜过 蛮干[极限编程中的YAGNI原则]）
+13. If the implementation is hard to explain, it's a bad idea.（如果一个实现方案难于理解，它一定不是一个好方案）    If the implementation is easy to explain, it may be a good idea.（如果一个实现方案易于理解，它很可能是一个好方案）
+14. Namespaces are one honking great idea -- let's do more of those!（命名空间非常有用，我们应当多加利用）
